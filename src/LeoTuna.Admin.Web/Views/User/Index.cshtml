@@ -1,0 +1,37 @@
+﻿@model List<LeoTuna.Admin.Web.Models.User>
+@{
+    ViewBag.Title = "Users";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Users</h3>
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                { 
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.FullName</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@user.Id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

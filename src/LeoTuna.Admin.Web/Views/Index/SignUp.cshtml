@@ -1,0 +1,38 @@
+﻿@model LeoTuna.Admin.Web.Dtos.SignUpDto
+@{
+    Layout = "~/Views/Shared/_PublicLayout.cshtml";
+    ViewBag.Title = "Sign Up";
+}
+
+<div class="login-page" style="min-height: 466px;">
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <span class="h1"><b>LeoTuna</b>.Admin</span>
+            </div>
+            <div class="card-body">
+                <p class="login-box-msg">Register a new membership</p>
+                <form asp-action="SignUp" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Full Name" asp-for="FullName" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" asp-for="Email" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Password" asp-for="Password" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="mb-0">
+                    <a asp-action="SignIn">I already have an account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model LeoTuna.Admin.Web.Models.User
+@{
+    ViewBag.Title = "Edit - Users";
+}
+
+<div class="row mb-2">
+    <div class="col-12">
+        <a class="btn btn-outline-primary" asp-action="Index">Go back</a>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-12 col-lg-4">
+            <div class="card">
+                <form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="FullName">Full Name</label>
+                            <input type="text" class="form-control" id="FullName" asp-for="FullName">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
